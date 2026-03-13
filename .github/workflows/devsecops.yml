@@ -29,3 +29,9 @@ jobs:
       with:
         scan-type: 'fs'
         format: 'table'
+
+    - name: Install Bandit
+      run: pip install bandit
+
+    - name: Run SAST Scan
+      run: bandit -r .
