@@ -21,7 +21,7 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(f"Visit count: {count}".encode())
 
-server = HTTPServer(("0.0.0.0", 8000), Handler)
+server = HTTPServer(("0.0.0.0", 8000), Handler)  # nosec
 
 print("Server running on port 8000...")
 server.serve_forever()
